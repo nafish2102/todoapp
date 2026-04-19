@@ -6,13 +6,13 @@ const TodoApp = () => {
 
   const addTodo = () => {
     if (task.trim() === "") {
-      alert("⚠️ Please enter a task!");
+      alert("Please enter a task!");
       return;
     }
     const newTodo = { id: Date.now(), text: task, completed: false };
     setTodos([...todos, newTodo]);
     setTask("");
-    alert("✅ Task added successfully!");
+    alert("Task added successfully!");
   };
     const handleKeyPress = (e) => {
         if (e.key === "Enter") {
@@ -62,7 +62,7 @@ const TodoApp = () => {
                   <span>{todo.text}</span>
                 </div>
                 <button className="delete-btn" onClick={() => deleteTodo(todo.id)}>
-                  ❌
+                  Delete
                 </button>
               </li>
             ))
